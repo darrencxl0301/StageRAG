@@ -4,17 +4,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![HuggingFace](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/darren0301/domain-mix-qa-1k)
 
-A production-ready Retrieval-Augmented Generation (RAG) system using staged processing with Llama 3.2 models (1B and 3B). Features dual-mode processing (speed vs precision), LRU caching, and confidence-based response filtering.
+StageRAG is a lightweight, production-ready RAG framework designed to give you precise control over the speed-versus-accuracy trade-off. It allows you to build high-factuality applications while gracefully managing uncertainty in LLM responses.
 
 ## 🌟 Features
 
-- **Dual Processing Modes**
-  - **Speed Mode**: 3-step pipeline (1B + 3B models, ~3-4s response)
-  - **Precision Mode**: 4-step pipeline (3B model, ~4-12s response)
-- **Intelligent Caching**: LRU cache with configurable size for repeated queries
-- **Confidence Evaluation**: Multi-component scoring system
-- **Dynamic RAG Retrieval**: Adjusts result count based on confidence
-- **4-bit Quantization**: Reduce memory usage while maintaining quality
+- **Dual-Mode Pipelines:** Dynamically switch between two processing modes based on your needs:
+  - **Speed Mode**: 3-step pipeline (1B + 3B models, ~3-5s response)
+  - **Precision Mode**: 4-step pipeline (3B model, ~6-12s response)
+- **Easy Knowledge Base Integration:** Deploy with your own data by providing a JSONL file in the standard conversation format. The system automatically builds vector indices and handles retrieval.
+- **Built-in Confidence Scoring:** Every answer includes multi-component confidence evaluation (retrieval quality, answer structure, relevance, uncertainty detection). Programmatically handle low-confidence responses to reduce hallucinations.
+- **Optimized for Smaller Models:** Built on Llama 3.2 1B and 3B models with 4-bit quantization support, requiring only 4-8GB GPU memory while maintaining quality.
 
 ## 📋 Prerequisites
 
