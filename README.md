@@ -284,7 +284,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```bibtex
 @software{stagerag2024,
   author = {Darren Chai Xin Lun},
-  title = {StageRAG: Multi-Stage RAG System with Confidence Evaluation},
+  title = {StageRAG: A Dual-Pipeline RAG Framework},
   year = {2024},
   url = {https://github.com/darrencxl0301/StageRAG},
   note = {Dataset: https://huggingface.co/datasets/darren0301/domain-mix-qa-1k}
