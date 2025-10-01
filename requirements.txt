@@ -1,0 +1,9 @@
+torch>=2.2.0
+transformers>=4.48.0
+sentence-transformers>=2.3.0
+faiss-cpu>=1.7.4
+numpy>=1.26.0
+bitsandbytes>=0.41.0
+accelerate>=0.20.0
+datasets>=2.14.0
+huggingface-hub>=0.17.0
