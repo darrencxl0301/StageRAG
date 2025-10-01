@@ -250,8 +250,8 @@ User Input → [1B] Normalize → [3B] RAG Retrieve → [3B] Synthesize → [3B]
 
 | Mode | Avg Time | Avg Confidence | Use Case |
 |------|----------|----------------|----------|
-| Speed | 2.3s | 0.68  | Real-time chat |
-| Precision | 6.8s | 0.81 | Complex queries, critical decisions |
+| Speed | 3.3s | 0.68  | Real-time chat |
+| Precision | 7.8s | 0.81 | Complex queries, critical decisions |
 
 *Tested on NVIDIA RTX 3090 GPU with 4-bit quantization*
 
