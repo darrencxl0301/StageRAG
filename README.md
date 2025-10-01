@@ -9,8 +9,8 @@ A production-ready Retrieval-Augmented Generation (RAG) system using staged proc
 ## 🌟 Features
 
 - **Dual Processing Modes**
-  - **Speed Mode**: 3-step pipeline (1B + 3B models, ~2-3s response)
-  - **Precision Mode**: 4-step pipeline (3B model, ~4-6s response)
+  - **Speed Mode**: 3-step pipeline (1B + 3B models, ~3-4s response)
+  - **Precision Mode**: 4-step pipeline (3B model, ~4-12s response)
 - **Intelligent Caching**: LRU cache with configurable size for repeated queries
 - **Confidence Evaluation**: Multi-component scoring system
 - **Dynamic RAG Retrieval**: Adjusts result count based on confidence
@@ -147,7 +147,7 @@ system = StageRAGSystem(args)
 
 # Process query
 result = system.process_query(
-    "What are the EPF contribution rates in Malaysia?",
+    "What are the EPF contribution rates?",
     mode="speed"
 )
 
@@ -248,22 +248,23 @@ User Input → [1B] Normalize → [3B] RAG Retrieve → [3B] Synthesize → [3B]
 
 ## 📊 Performance Benchmarks
 
-| Mode | Avg Time | Avg Confidence | Cache Hit Rate | Use Case |
-|------|----------|----------------|----------------|----------|
-| Speed | 2.3s | 0.72 | 65% | Real-time chat, high throughput |
-| Precision | 4.8s | 0.81 | 65% | Complex queries, critical decisions |
+| Mode | Avg Time | Avg Confidence | Use Case |
+|------|----------|----------------|----------|
+| Speed | 2.3s | 0.68  | Real-time chat |
+| Precision | 6.8s | 0.81 | Complex queries, critical decisions |
 
-*Tested on NVIDIA A100 GPU with 4-bit quantization*
+*Tested on NVIDIA RTX 3090 GPU with 4-bit quantization*
 
 ## 📦 Dataset
 
 Sample dataset: [darren0301/domain-mix-qa-1k](https://huggingface.co/datasets/darren0301/domain-mix-qa-1k)
 
 Contains 1,000 domain-specific Q&A pairs covering:
-- HR policies and procedures
-- Employment regulations
-- Workplace guidelines
+- Logical & Mathematical Reasoning 
+- Specialized Medical Domain Knowledge
+- Open-Ended General Instruction Following
 - Employee benefits information
+- Practical, Real-World Q&A
 
 ## 🤝 Contributing
 
