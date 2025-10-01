@@ -13,7 +13,7 @@ StageRAG is a lightweight, production-ready RAG framework designed to give you p
   - **Precision Mode**: 4-step pipeline (3B model, ~6-12s response)
 - **Easy Knowledge Base Integration:** Deploy with your own data by providing a JSONL file in the standard conversation format. The system automatically builds vector indices and handles retrieval.
 - **Built-in Confidence Scoring:** Every answer includes multi-component confidence evaluation (retrieval quality, answer structure, relevance, uncertainty detection). Programmatically handle low-confidence responses to reduce hallucinations.
-- **Optimized for Smaller Models:** Built on Llama 3.2 1B and 3B models with 4-bit quantization support, requiring only 4-8GB GPU memory while maintaining quality.
+- **Optimized for Smaller Models:** Built on Llama 3.2 1B and 3B models with 4-bit quantization support, requiring only 5-10GB GPU memory while maintaining quality.
 
 ## 📋 Prerequisites
 
@@ -40,7 +40,7 @@ Get your token from: https://huggingface.co/settings/tokens
 
 - Python >= 3.8
 - CUDA-capable GPU (recommended) or CPU
-- 6GB+ RAM for 4-bit mode, 8GB+ for full precision
+- 5GB+ RAM for 4-bit mode, 10GB+ for full precision
 - Internet connection for initial model download
 
 ## 🚀 Installation
