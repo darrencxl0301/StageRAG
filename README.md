@@ -41,7 +41,7 @@ Get your token from: https://huggingface.co/settings/tokens
 
 - Python >= 3.8
 - CUDA-capable GPU (recommended) or CPU
-- 16GB+ RAM for 4-bit mode, 32GB+ for full precision
+- 6GB+ RAM for 4-bit mode, 8GB+ for full precision
 - Internet connection for initial model download
 
 ## 🚀 Installation
