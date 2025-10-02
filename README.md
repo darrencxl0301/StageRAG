@@ -1,4 +1,4 @@
-# StageRAG: A Dual-Pipeline RAG Framework
+# StageRAG: A Framework for Building Hallucination-Resistant RAG Applications
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -284,7 +284,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```bibtex
 @software{stagerag2024,
   author = {Darren Chai Xin Lun},
-  title = {StageRAG: A Dual-Pipeline RAG Framework},
+  title = {StageRAG: A Framework for Building Hallucination-Resistant RAG Applications},
   year = {2024},
   url = {https://github.com/darrencxl0301/StageRAG},
   note = {Dataset: https://huggingface.co/datasets/darren0301/domain-mix-qa-1k}
